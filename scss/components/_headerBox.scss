@@ -1,0 +1,158 @@
+.headerBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: white;
+    font-size: 25px;
+    padding: 50px 0px;
+
+    h3{
+        font-family: $title2;
+        color: $primary;
+        padding: 20px;
+        
+    }
+
+    h2{
+        font-family: $subTitle;
+    }
+
+    .contactBtn{
+        padding: 10px 15px;
+        // background-color: $primary;
+        // color: white;
+        font-size: 20px;
+        position: relative;
+        overflow:  hidden;
+    }
+    .contactBtn:hover{
+        background-color: $primary;
+        color: black;
+        font-weight: bolder;
+    }
+
+    .contactBtn::before{
+        content: " ";
+        background-color: white;
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 50px;
+        transform: translateX(-100%) rotate(45deg);
+        transition: all 0.3s;
+
+    }
+
+    
+.contactBtn:hover:before{
+
+    transform: translate(100%) rotate(45deg);
+
+}
+}
+
+@media (min-width:720px){
+    .headerBox{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        color: white;
+        font-size: 35px;
+        padding: 50px 50px;
+
+    }
+
+    .contactBtn{
+        margin-top: 20px;
+    }
+    
+}
+
+
+@media (min-width:1250px) and(max-width:1500px){
+
+    .headerBox{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: auto;
+        color: white;
+        font-size: 40px;
+        width: 70%;
+     
+    }
+
+    .boxText{
+        animation: textFall 1s linear 1;
+    }
+
+    .contactBtn{
+        margin-top: 20px;
+        animation: buttonUp 1s linear 1;
+    }
+    
+}
+
+
+@media(min-width:1500px){
+
+    .headerBox{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: auto;
+        color: white;
+        font-size: 60px;
+        width: 70%;
+        height: 80vh;
+     
+    }
+
+    .boxText{
+        animation: textFall 1s linear 1;
+    }
+
+    .contactBtn{
+        margin-top: 20px;
+        animation: buttonUp 1s linear 1;
+    }
+    
+}
+
+
+
+@keyframes textFall{
+
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes buttonUp{
+    0%{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+        
+    }
+}

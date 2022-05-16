@@ -1,0 +1,313 @@
+nav{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+    min-height: 8vh;
+
+
+  
+     
+   h1{
+       color: black;
+       font-size: 40px;
+       font-family:$title;
+       letter-spacing: 5px;
+   }
+    img{
+        // width: 50%;
+        max-width: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .links{
+        // background-color: red;
+        display: flex;
+        justify-content: space-around;
+        width: 30%;
+    }
+
+    .links a{
+        color: black;
+        font-size: 25px;
+        text-decoration: none;
+        font-weight: 600;
+
+    }
+
+    .links a:hover{
+        color: $primary;
+    }
+
+    .burger{
+        display: none;
+    }
+
+    .burger div{
+        height: 3px;
+        width: 35px;
+        background-color: black;
+        margin: 5px;
+    }
+
+    .navRight{
+        display: none;
+    }
+}
+
+
+
+@media(max-width:450px){
+
+
+    nav{ 
+
+        
+
+        .navLeft h1{
+            font-size: 30px;
+        }
+
+
+        .logoBox{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .logo{
+            width: 75px;
+      
+        }
+
+        .burger div{
+              
+            height: 2px;
+            width: 30px;
+        }
+    }
+}
+
+
+@media (max-width:920px){
+
+
+    nav{
+
+      
+        .navLeft{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // padding: 30px;
+            width: 20%;
+        }
+
+
+        .logoBox{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .navLeft h1{
+
+            margin: 0px 0px 0px 20px;
+        }
+
+        
+
+         .logo{
+             width: 100px;
+         }
+
+       
+
+        width: 100%;
+        z-index: -1;
+        
+        .links{
+            position: absolute;
+            left:0;
+            height: 50vh;
+            top: 104px;
+            background-color: gold;
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            text-align: left;
+            width: 50%;
+            max-width: 200px;
+            transform: translatex(-120%);
+            transition: .4s ease-in;
+            z-index: 999;
+            opacity: 0;
+          
+
+        }
+        .links a{
+            margin-left: 50px;
+        }
+
+
+        .burger{
+            display: block;
+        }
+
+        .nav-active{
+            transform: translateX(0%);
+            opacity: 1;
+            
+        }
+    }
+
+
+}
+
+
+
+@media (min-width:921px) and (max-width:1200px) {
+
+     nav{
+
+        background-color: transparent;
+        border-bottom: 1px solid gray;
+
+
+        .navLeft{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logoBox{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .logoBox h1{
+            color: white;
+        }
+
+        .logoBox .logo{
+            margin: 0px 20px 0px 0px;
+        }
+
+        .logo{
+            width: 150px;
+            height: 70%;
+            align-self: center;
+            
+        }
+
+        .links a{
+
+            margin: 0px 30px 0px 0px;
+            font-size: 30px;
+            color: white;  
+        }
+
+        .links a:hover{
+            color: $primary;
+        }
+     }
+}
+
+
+
+@media (min-width:1200px){
+
+    nav{
+
+        background-color: transparent;
+        border-bottom: 1px solid gray;
+
+
+        .navLeft{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navRight{
+            display: flex;
+            flex-direction: row;
+            color: white;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navSocial i{
+            margin: 0px 10px 0px 0px;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .navSocial i:hover{
+            color: $primary;
+        }
+
+
+        .question{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0px 10px;
+            border-left: 1px solid gray;
+        }
+
+        .question i{
+            margin: 20px;
+            font-size: 30px;
+            color: $primary;
+        }
+
+        .question h1{
+            color: white;
+            font-size: 20px;
+        }
+
+        .logoBox{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .logoBox h1{
+            color: white;
+        }
+
+        .logoBox .logo{
+            margin: 0px 20px 0px 0px;
+        }
+
+        .logo{
+            width: 150px;
+            height: 70%;
+            align-self: center;
+            
+        }
+
+        .links a{
+
+            margin: 0px 15px 0px 0px;
+            font-size: 25px;
+            color: white;
+            
+        }
+     }
+
+}
+
+
+
+
+

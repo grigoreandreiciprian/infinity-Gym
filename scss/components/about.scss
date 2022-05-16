@@ -1,0 +1,279 @@
+.about{
+      padding: 50px 30px 0px 30px;
+      background-color: #eee;
+    h1{
+        font-family: $subTitle;
+        text-align: center;
+    }
+
+    h3{
+        font-family: $title;
+        text-align: center;
+        font-size: 30px;
+        margin: 0px;
+        color: $primary;
+    }
+
+    p{
+        font-size: 20px;
+    }
+     
+    img{
+        max-width: 500px;
+    }
+
+    .aboutCard{
+        padding: 10px 0px;
+        font-size: 20px;
+    }
+    .girl{
+    
+        display: none;
+    }
+    .aboutCard i{
+        // width: 10%;
+        font-size: 40px;
+        padding: 15px 0px;
+        color: $primary;
+        
+    }
+
+    .aboutImg{
+        margin:auto;
+        display: block;
+        width: 60%;
+    }
+
+ 
+}
+
+
+
+@media (min-width:720px){
+     
+
+    .about{
+
+        .aboutBox{
+            display: grid;
+            grid-template-columns: 1fr .5fr 1fr;
+           flex-direction: row;
+           justify-content: center;
+           align-items: center;
+           width: 100%;
+           margin: auto;
+        }
+        .aboutStanga , .aboutDreapta{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 5% auto;
+            padding: 10px;
+           
+            
+        }
+
+        .aboutCard{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          
+        }
+
+        .aboutCard p{
+            margin: 10px 0px;
+            font-size: 17px;
+            line-height: 25px;
+        }
+
+        .aboutCard h2{
+            font-size: 20px;
+        }
+
+        .aboutImg{
+            width: 100%;
+            margin: auto;
+        }
+        .girl{
+            max-width: 250px;
+            height: 400px;
+            display: block;
+        }
+    }
+}
+
+
+@media (min-width:1200px) and (max-width:1500px){
+
+    .about{
+
+        width: 100%;
+        margin: auto;
+        background-color: #eee;
+        color: black;
+
+       .aboutBox{
+           display: grid;
+           grid-template-columns: 1fr 1fr 1fr;
+           width: 80%;
+           margin: auto;
+       }
+        .aboutStanga , .aboutDreapta{
+            display: flex;
+            flex-direction: column;
+           
+            width: 100%;
+            // margin: 5% auto; 
+        }
+
+        .aboutStanga{
+            animation: Stanga 1s linear 1;
+        }
+
+        .aboutDreapta{
+            animation: Dreapta 1s linear 1;
+        }
+
+        .aboutCard{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          
+        }
+
+        .aboutCard p{
+            margin: 10px 0px;
+            font-size: 16px;
+            line-height: 25px;
+        }
+
+        .aboutCard h2{
+            font-size: 20px;
+        }
+
+        .aboutImg{
+            width: 100%;
+            margin: auto;
+        }
+        .girl{
+           padding: 0px 20px;
+            max-width: 350px;
+            margin: auto;
+            display: block;
+            height: 100%;
+            animation: girl 1s linear 1;    
+        }
+    }
+}
+
+
+@media (min-width:1500px){
+
+    .about{
+
+        width: 100%;
+        margin: auto;
+        background-color: #eee;
+        color: black;
+
+       .aboutBox{
+           display: grid;
+           grid-template-columns: 1fr 1fr 1fr;
+           width: 80%;
+           margin: auto;
+       }
+        .aboutStanga , .aboutDreapta{
+            display: flex;
+            flex-direction: column;
+           
+            width: 100%;
+            // margin: 5% auto; 
+        }
+
+        .aboutStanga{
+            animation: Stanga 1s linear 1;
+        }
+
+        .aboutDreapta{
+            animation: Dreapta 1s linear 1;
+        }
+
+        .aboutCard{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          
+        }
+
+        .aboutCard p{
+            margin: 10px 0px;
+            font-size: 20px;
+            line-height: 25px;
+        }
+
+        .aboutCard h2{
+            font-size: 25px;
+        }
+
+        .aboutImg{
+            width: 100%;
+            margin: auto;
+        }
+        .girl{
+           padding: 10px 20px;
+            max-width: 450px;
+            margin: auto;
+            display: block;
+            height: 100%;
+            animation: girl 1s linear 1;    
+        }
+    }
+
+
+}
+
+
+
+
+@keyframes girl{
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes Stanga{
+
+    0%{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes Dreapta{
+
+    0%{
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+}
+

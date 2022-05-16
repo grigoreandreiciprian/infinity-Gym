@@ -1,0 +1,270 @@
+
+.classes{
+
+    padding: 50px 30px 50px 30px;
+
+    h1{
+        font-family: $subTitle;
+        text-align: center;
+    }
+
+    h3{
+        font-family: $title;
+        text-align: center;
+        font-size: 30px;
+        margin: 0px;
+        color: $primary;
+    }
+
+    .classCard{
+        margin: auto;
+        display: block;
+        width: 90%;
+    }
+
+    .cardImg{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: black;
+        position: relative;
+    }
+
+    .cardImg img{
+        width: 100%;
+    }
+
+    .overlay{
+        background-color:rgba(0,0,0,.35);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        // margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        color: white;  
+
+        transition: .5s all;
+        transform: scale(0);
+    }
+
+    .overlay img{
+        width: 15%;
+    }
+
+    .overlay h2{
+        margin: 10px;
+        font-family: $subTitle;
+        text-transform: uppercase;
+    }
+
+    .overlay p{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .read{
+        padding: 10px 15px;
+        // background-color: $primary;
+        // color: white;
+        font-size: 15px;
+        position: relative;
+        overflow:  hidden;
+    }
+    .read:hover{
+        background-color: $primary;
+        color: black;
+        font-weight: bolder;
+    }
+
+    .read::before{
+        content: " ";
+        background-color: white;
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 50px;
+        transform: translateX(-100%) rotate(45deg);
+        transition: all 0.3s;
+
+    }
+
+    
+.read:hover:before{
+
+    transform: translate(100%) rotate(45deg);
+
+}
+
+.cardImg:hover .overlay{
+    transform: scale(1);
+}
+}
+
+
+@media (min-width:720px) and (max-width:1200px){
+
+    .classes{
+        
+        .classCards{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap:20px;
+        }
+
+        .cardImg{
+            height: 350px;
+        }
+
+        
+    }
+}
+
+
+@media (min-width:1200px) and (max-width:1800px){
+
+    .classes{
+        
+        .classCards{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            width: 80%;
+            margin: auto;
+        }
+
+
+       
+        
+         .cardImg img{
+            height: 250px;
+            width: 250px
+        }
+       
+
+        .cardImg{
+            height: 100%;
+            max-width:400px;
+        }
+
+
+        .overlay{
+            background-color:rgba(0,0,0,.35);
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            // margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            color: white;  
+            font-size: 15px;
+    
+            transition: .5s all;
+            transform: scale(0);
+        }
+
+        .overlay p{
+            font-size: 15px;
+        }
+
+        .read{
+            padding: 5px 10px; 
+        }
+
+
+        .overlay img{
+            width: 50px;
+            height: 50px;
+        }
+
+    }
+  
+}
+
+
+
+
+
+@media (min-width:1800px){
+    
+
+    .classes{
+        
+        .classCards{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap:10px 0px;
+            width: 80%;
+            margin: auto;
+        }
+
+        .cardImg{
+            height: 100%;
+            max-width:500px;
+        }
+
+
+        .cardImg{
+            // width: 100%;
+            max-width: 500px;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: black;
+            position: relative;
+        }
+    
+        .cardImg img{
+            width: 400px;
+            height: 300px;
+        }
+
+
+        .overlay{
+            background-color:rgba(0,0,0,.35);
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            // margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            color: white;  
+    
+            transition: .5s all;
+            transform: scale(0);
+        }
+    
+        .overlay img{
+            width: 70px;
+            height: 70px;
+        }
+
+        
+    }
+}
+
+
